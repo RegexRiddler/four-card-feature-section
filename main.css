@@ -91,20 +91,19 @@ section > img {
     align-self: flex-end;
 }
 
-.supervisor {
+section:nth-last-of-type(1) { /* Supervisor */
     border-top: 3.55px solid var(--teal);
 }
 
-.team-builder {
+section:nth-last-of-type(2) { /* Team Builder */
     border-top: 3.55px solid var(--red);
-    margin-bottom: 30px;
 }
 
-.karma {
+section:nth-last-of-type(3) { /* Karma */
     border-top: 3.55px solid var(--yellow);
 }
 
-.calculator {
+section:nth-last-of-type(4) { /* Calculator */
     border-top: 3.55px solid var(--blue);
 }
 
