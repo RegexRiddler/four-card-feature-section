@@ -20,25 +20,24 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 85px 32px 75px 32px;
-    gap: 25px;
+    padding: 85px 32px 78px 32px;
     flex-wrap: wrap;
 }
 
 header {
     text-align: center;
     max-width: 540px;
-    margin-bottom: 50px;
+    margin-bottom: 75px;
 }
 
 header > h1 {
-    font-size: 24px;
+    font-size: clamp(1.5rem, 1.1484rem + 1.5vw, 2.25rem);
     font-weight: 200;
     letter-spacing: .167px;
 }
 
 header > h2 {
-    font-size: 24px;
+    font-size: clamp(1.5rem, 1.1484rem + 1.5vw, 2.25rem);
     font-weight: 600;
     letter-spacing: .167px;
     margin-bottom: 16px;
@@ -53,12 +52,8 @@ header > p {
 }
 
 main > div {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+    display: grid;
+    gap: 25px;
 }
 
 section {
@@ -69,7 +64,7 @@ section {
     padding: 28px;
     border-radius: 8px;
     background-color: var(--pure-white);
-    box-shadow: 0px 15px 30px -11px hsla(213, 47%, 67%, 0.5);
+    box-shadow: 0px 15px 30px -11px #83a7d280;
 }
 
 section > h1 {
@@ -91,34 +86,21 @@ section > img {
     align-self: flex-end;
 }
 
-section:nth-last-of-type(1) { /* Supervisor */
+section:nth-of-type(1) { /* Supervisor */
     border-top: 3.55px solid var(--teal);
 }
 
-section:nth-last-of-type(2) { /* Team Builder */
+section:nth-of-type(2) { /* Team Builder */
     border-top: 3.55px solid var(--red);
 }
 
-section:nth-last-of-type(3) { /* Karma */
+section:nth-of-type(3) { /* Karma */
     border-top: 3.55px solid var(--yellow);
 }
 
-section:nth-last-of-type(4) { /* Calculator */
+section:nth-of-type(4) { /* Calculator */
     border-top: 3.55px solid var(--blue);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .attribution { 
     position: absolute;
@@ -138,4 +120,66 @@ section:nth-last-of-type(4) { /* Calculator */
 .attribution p {
     font-size: 11px;
     margin: 0;
+}
+
+@media (min-width: 800px) {
+    main > div {
+        grid-auto-flow: column;
+        grid-template: 1fr 1fr / 1fr 1fr;
+    }
+
+    section:nth-of-type(1) { /* Supervisor */
+        order: 1;
+    }
+    
+    section:nth-of-type(2) { /* Team Builder */
+        order: 3;
+    }
+    
+    section:nth-of-type(3) { /* Karma */
+        order: 2;
+    }
+    
+    section:nth-of-type(4) { /* Calculator */
+        order: 4;
+    }
+
+}
+
+@media (min-width: 1175px) {
+    main {
+        padding: 80px 32px;    
+    }
+
+    header > h1 + h2 {
+        letter-spacing: .25px;
+    }
+
+    header {
+        margin-bottom: 64px;
+    }
+
+    main > div {
+        grid-auto-flow: column;
+        grid-template: repeat(2, auto) / repeat(3, 350px);
+        gap: 30px;
+    }
+
+    section:nth-of-type(1) { /* Supervisor */
+        grid-row: span 2;
+        align-self: center;
+    }
+    
+    section:nth-of-type(2) { /* Team Builder */
+        grid-area: 1 / 2;
+    }
+    
+    section:nth-of-type(3) { /* Karma */
+        grid-area: 2 / 2;
+    }
+    
+    section:nth-of-type(4) { /* Calculator */
+        grid-row: span 2;
+        align-self: center;
+    }
 }
