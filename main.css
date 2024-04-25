@@ -53,13 +53,13 @@ header > p {
 }
 
 /* Card wrapper */
-main > div {
+main > section {
     display: grid;
     gap: 25px;
 }
 
 /* Cards */
-section {
+article {
     display: flex;
     flex-direction: column;
     max-width: 350px;
@@ -70,12 +70,12 @@ section {
     box-shadow: 0px 15px 30px -11px #83a7d280;
 }
 
-section > h1 {
+article > h2 {
     font-size: 20px;
     font-weight: 600;
 }
 
-section > p {
+article > p {
     font-size: 13px;
     line-height: 23px;
     letter-spacing: .09px;
@@ -83,26 +83,26 @@ section > p {
     margin-bottom: 32px;
 }
 
-section > img {
+article > img {
     width: 57px;
     height: 57px;
     align-self: flex-end;
 }
 
 /* Card border */
-section:nth-of-type(1) { /* Supervisor */
+article:nth-of-type(1) { /* Supervisor */
     border-top: 3.55px solid var(--teal);
 }
 
-section:nth-of-type(2) { /* Team Builder */
+article:nth-of-type(2) { /* Team Builder */
     border-top: 3.55px solid var(--red);
 }
 
-section:nth-of-type(3) { /* Karma */
+article:nth-of-type(3) { /* Karma */
     border-top: 3.55px solid var(--yellow);
 }
 
-section:nth-of-type(4) { /* Calculator */
+article:nth-of-type(4) { /* Calculator */
     border-top: 3.55px solid var(--blue);
 }
 
@@ -131,24 +131,24 @@ section:nth-of-type(4) { /* Calculator */
 
 /* Medium screen size */
 @media (min-width: 800px) {
-    main > div {
+    main > section {
         grid-auto-flow: column;
         grid-template: 1fr 1fr / 1fr 1fr;
     }
 
-    section:nth-of-type(1) { /* Supervisor */
+    article:nth-of-type(1) { /* Supervisor */
         order: 1;
     }
     
-    section:nth-of-type(2) { /* Team Builder */
+    article:nth-of-type(2) { /* Team Builder */
         order: 3;
     }
     
-    section:nth-of-type(3) { /* Karma */
+    article:nth-of-type(3) { /* Karma */
         order: 2;
     }
     
-    section:nth-of-type(4) { /* Calculator */
+    article:nth-of-type(4) { /* Calculator */
         order: 4;
     }
 
@@ -172,43 +172,43 @@ section:nth-of-type(4) { /* Calculator */
         margin-bottom: 64px;
     }
 
-    main > div {
+    main > section {
         grid-auto-flow: column;
         grid-template: repeat(2, auto) / repeat(3, 350px);
         gap: 30px;
     }
 
-    section {
+    article {
         padding: 32px;
     }
 
-    section > h1 {
+    article > h2 {
         margin-bottom: 6px;
     }
 
-    section > p {
+    article > p {
         margin-bottom: 40px;
     }
 
-    section > img {
+    article > img {
         height: 64px;
         width: 64px;
     }
 
-    section:nth-of-type(1) { /* Supervisor */
+    article:nth-of-type(1) { /* Supervisor */
         grid-row: span 2;
         align-self: center;
     }
     
-    section:nth-of-type(2) { /* Team Builder */
+    article:nth-of-type(2) { /* Team Builder */
         grid-area: 1 / 2;
     }
     
-    section:nth-of-type(3) { /* Karma */
+    article:nth-of-type(3) { /* Karma */
         grid-area: 2 / 2;
     }
     
-    section:nth-of-type(4) { /* Calculator */
+    article:nth-of-type(4) { /* Calculator */
         grid-row: span 2;
         align-self: center;
     }
