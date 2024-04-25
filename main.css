@@ -160,8 +160,12 @@ section:nth-of-type(4) { /* Calculator */
         padding: 80px 32px;    
     }
 
-    header > h1 + h2 {
+    header h1, header h2 {
         letter-spacing: .25px;
+    }
+
+    header h2 {
+        margin-bottom: 13px;
     }
 
     header {
