@@ -24,6 +24,7 @@ main {
     flex-wrap: wrap;
 }
 
+/* Header text */
 header {
     text-align: center;
     max-width: 540px;
@@ -51,11 +52,13 @@ header > p {
     opacity: .5;
 }
 
+/* Card wrapper */
 main > div {
     display: grid;
     gap: 25px;
 }
 
+/* Cards */
 section {
     display: flex;
     flex-direction: column;
@@ -86,6 +89,7 @@ section > img {
     align-self: flex-end;
 }
 
+/* Card border */
 section:nth-of-type(1) { /* Supervisor */
     border-top: 3.55px solid var(--teal);
 }
@@ -102,6 +106,8 @@ section:nth-of-type(4) { /* Calculator */
     border-top: 3.55px solid var(--blue);
 }
 
+
+/* Footer */
 .attribution { 
     position: absolute;
     top: 0;
@@ -122,6 +128,8 @@ section:nth-of-type(4) { /* Calculator */
     margin: 0;
 }
 
+
+/* Medium screen size */
 @media (min-width: 800px) {
     main > div {
         grid-auto-flow: column;
@@ -146,6 +154,7 @@ section:nth-of-type(4) { /* Calculator */
 
 }
 
+/* Large screen size */
 @media (min-width: 1175px) {
     main {
         padding: 80px 32px;    
@@ -163,6 +172,23 @@ section:nth-of-type(4) { /* Calculator */
         grid-auto-flow: column;
         grid-template: repeat(2, auto) / repeat(3, 350px);
         gap: 30px;
+    }
+
+    section {
+        padding: 32px;
+    }
+
+    section > h1 {
+        margin-bottom: 6px;
+    }
+
+    section > p {
+        margin-bottom: 40px;
+    }
+
+    section > img {
+        height: 64px;
+        width: 64px;
     }
 
     section:nth-of-type(1) { /* Supervisor */
