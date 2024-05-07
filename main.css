@@ -64,18 +64,22 @@ article {
     flex-direction: column;
     max-width: 350px;
 
-    padding: 28px;
     border-radius: 8px;
     background-color: var(--pure-white);
     box-shadow: 0px 15px 30px -11px #83a7d280;
+    overflow: hidden;
 }
 
-article > h2 {
+article div {
+    padding: 28px;
+}
+
+article h2 {
     font-size: 20px;
     font-weight: 600;
 }
 
-article > p {
+article p {
     font-size: 13px;
     line-height: 23px;
     letter-spacing: .09px;
@@ -83,26 +87,26 @@ article > p {
     margin-bottom: 32px;
 }
 
-article > img {
+article img {
     width: 57px;
     height: 57px;
     align-self: flex-end;
 }
 
 /* Card border */
-article:nth-of-type(1) { /* Supervisor */
+article:nth-of-type(1) div { /* Supervisor */
     border-top: 3.55px solid var(--teal);
 }
 
-article:nth-of-type(2) { /* Team Builder */
+article:nth-of-type(2) div { /* Team Builder */
     border-top: 3.55px solid var(--red);
 }
 
-article:nth-of-type(3) { /* Karma */
+article:nth-of-type(3) div { /* Karma */
     border-top: 3.55px solid var(--yellow);
 }
 
-article:nth-of-type(4) { /* Calculator */
+article:nth-of-type(4) div { /* Calculator */
     border-top: 3.55px solid var(--blue);
 }
 
@@ -178,19 +182,19 @@ article:nth-of-type(4) { /* Calculator */
         gap: 30px;
     }
 
-    article {
+    article div {
         padding: 32px;
     }
 
-    article > h2 {
+    article h2 {
         margin-bottom: 6px;
     }
 
-    article > p {
+    article p {
         margin-bottom: 40px;
     }
 
-    article > img {
+    article img {
         height: 64px;
         width: 64px;
     }
