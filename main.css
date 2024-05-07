@@ -60,10 +60,6 @@ main > section {
 
 /* Cards */
 article {
-    display: flex;
-    flex-direction: column;
-    max-width: 350px;
-
     border-radius: 8px;
     background-color: var(--pure-white);
     box-shadow: 0px 15px 30px -11px #83a7d280;
@@ -71,6 +67,9 @@ article {
 }
 
 article div {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
     padding: 28px;
 }
 
